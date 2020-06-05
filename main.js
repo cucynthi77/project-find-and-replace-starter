@@ -39,7 +39,7 @@ replaceAllButton.addEventListener("click", function () {
         for (let index2 = 0; index2 < currentRowElementCellarray.length; index2++) {
             let currentCell = currentRowElementCellarray[index2]
             let currentCellContent = currentCell.innerHTML
-            if (currentCellContent.includes(userInput)) {
+            if (currentCellContent.toLowerCase().includes(userInput.toLowerCase())) {
                 //    console.log("Found", currentCellContent)
                 currentCell.innerHTML = currentCellContent.replace(userInput, replacementInput)
                 numberOfTimes = numberOfTimes + 1
